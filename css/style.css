@@ -1,0 +1,305 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	color: #fff;
+}
+
+/* Video Background Styling */
+.video-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.video-background video {
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Content Layering */
+.content-container {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+}
+
+/* Navigation Bar */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 40px;
+	background: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+}
+
+.logo-image {
+	max-width: 120px;
+	height: auto;
+}
+
+.nav-links {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.nav-links li {
+	margin: 0 15px;
+}
+
+.nav-links a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+	color: #ddd;
+}
+
+/* Main Content */
+.main-content {
+	margin-top: 150px;
+	padding: 0 20px;
+}
+
+.main-content h1 {
+	font-size: 3.5em;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main-content p {
+	font-size: 1.2em;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		padding: 10px 20px;
+	}
+	.nav-links {
+		flex-direction: column;
+		align-items: center;
+		margin-top: 10px;
+	}
+	.nav-links li {
+		margin: 5px 0;
+	}
+	.main-content h1 {
+		font-size: 2.5em;
+	}
+}
+
+/* --- Services Section Styles --- */
+
+#services-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* A darker, semi-transparent background for readability */
+    margin: 40px auto; /* Using auto for horizontal centering */
+    border-radius: 10px;
+    max-width: 1200px;
+}
+
+#services-section h2 {
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent card background */
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    flex: 1 1 300px; /* Flexbox: cards will grow/shrink and wrap at 300px width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* A lifting effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.service-card p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #00aaff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0077cc;
+}
+
+/* --- Responsive Design for Services Section --- */
+
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* --- Contact Section Styles --- */
+
+#contact-section {
+    padding: 80px 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* A darker, semi-transparent background */
+    margin: 40px auto; /* Centers the section and adds vertical spacing */
+    border-radius: 10px;
+    max-width: 800px; /* A good maximum width for a form */
+    text-align: center;
+}
+
+#contact-section h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+#contact-section form {
+    display: flex;
+    flex-direction: column; /* Stacks the form elements vertically */
+    gap: 20px; /* Adds space between form elements */
+    text-align: left; /* Aligns labels and inputs to the left */
+}
+
+#contact-section label {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#contact-section input,
+#contact-section textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1em;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#contact-section input:focus,
+#contact-section textarea:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #00aaff;
+}
+
+/* Style for the 'Send Message' button */
+#contact-section .button {
+    align-self: center; /* Centers the button within the form */
+    padding: 15px 40px;
+    background-color: #00aaff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-section .button:hover {
+    background-color: #0077cc;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #contact-section {
+        margin: 20px auto;
+        padding: 40px 20px;
+    }
+
+    #contact-section h2 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+}
+
+/* --- Footer Styles --- */
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 50px; /* Adds some space between the content and the footer */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #00aaff;
+}
