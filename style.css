@@ -7,14 +7,11 @@ body {
 /* --- Mobile Fallback for Video Background --- */
 @media (max-width: 768px) {
     .video-background {
-        background-image: url('images/pexels-marketingtuig-185576.jpg'); /* The path to your image */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        background: linear-gradient(135deg, #0d1a2d, #1a2b40); /* A subtle gradient */
     }
 
     .video-background video {
-        display: none; /* Hides the video element on mobile */
+        display: none;
     }
 }
 
