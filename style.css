@@ -7,7 +7,7 @@ body {
 /* --- Mobile Fallback for Video Background --- */
 @media (max-width: 768px) {
     .video-background {
-        background-image: url('../videos/background-mobile.jpg'); /* The path to your image */
+        background-image: url('images/pexels-marketingtuig-185576.jpg'); /* The path to your image */
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
