@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	font-family: sans-serif;
 	color: #fff;
+	background: linear-gradient(135deg, #0d1a2d, #1a2b40); /* A subtle gradient */
 }
 /* --- Mobile Fallback for Video Background --- */
 @media (max-width: 768px) {
